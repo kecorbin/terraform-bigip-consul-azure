@@ -3,7 +3,7 @@ output "mgmt_url" {
 }
 
 output "consul_ui" {
-  value = "http://${azurerm_public_ip.consul-pip.ip_address}:8500/"
+  value = "http://${azurerm_public_ip.consul-pip.fqdn}:8500/"
 }
 
 output "app_url" {

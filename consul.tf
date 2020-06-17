@@ -23,7 +23,7 @@ resource "azurerm_public_ip" "consul-pip" {
   location            = var.region
   resource_group_name = azurerm_resource_group.main.name
   allocation_method   = "Dynamic"
-  domain_name_label   = "${var.prefix}-consul"
+  domain_name_label   = "${local.environment}-consul"
 }
 
 resource "azurerm_linux_virtual_machine" "consul" {

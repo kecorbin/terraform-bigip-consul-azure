@@ -98,7 +98,7 @@ resource "azurerm_public_ip" "sip_public_ip" {
   allocation_method   = "Static"   # Static is required due to the use of the Standard sku
   sku                 = "Standard" # the Standard sku is required due to the use of availability zones
   // zones               =  [element(local.azs, count.index)]
-
+  domain_name_label   = "${local.environment}-bigip"
   tags = {
     environment = local.environment
   }

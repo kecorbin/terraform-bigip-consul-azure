@@ -1,5 +1,5 @@
 variable "prefix" {
-  default = "f5-azure-consul"
+  default = "f5-azure-consul-ws"
 }
 
 variable "environment" {

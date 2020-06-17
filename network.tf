@@ -1,14 +1,7 @@
-provider "azurerm" {
-  version = ">2.0.0"
-  features {}
-}
 
-locals {
-  environment = "${var.prefix}-demo"
-}
 # Create a resource group 
 resource "azurerm_resource_group" "main" {
-  name     = "${var.prefix}-rg"
+  name     = "${var.prefix}-${random_string.random.result}"
   location = var.region
 
   tags = {

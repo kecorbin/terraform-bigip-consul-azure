@@ -8,7 +8,6 @@ resource "null_resource" "virtualserverAS3" {
               --retry 10 \
               --retry-delay 30 \
               --retry-max-time 600 \
-              --retry-connrefused \
               -u "admin:${random_password.bigippassword.result}" \
               -d '${data.template_file.virtualserverAS3.rendered}'
         EOT
